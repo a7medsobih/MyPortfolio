@@ -1,0 +1,76 @@
+/* Header.css */
+.circle {
+    @apply bg-primary-light shadow-md shadow-black/20 p-2 rounded-full border text-subtitle hover:text-light smooth-transition active:scale-90;
+    border-color: rgb(224 165 96 / 0.2);
+}
+
+.circle:hover {
+    border-color: rgb(224 165 96);
+}
+
+.modal {
+    @apply bg-primary mt-10 w-[85%] mx-auto py-4 px-6 rounded-2xl;
+    animation: open 0.5s ease;
+}
+
+.overlay {
+    @apply fixed inset-0 z-[999];
+    background-color: rgba(40, 40, 48, 0.91);
+    animation: fadeIn 0.4s ease forwards;
+}
+
+/* ✅ عند الإغلاق */
+.overlay.closing {
+    animation: fadeOut 0.4s ease forwards;
+}
+
+.modal.closing {
+    animation: close 0.4s ease forwards;
+}
+
+@keyframes open {
+    0% {
+        scale: 0;
+    }
+
+    60% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes close {
+    0% {
+        scale: 1;
+        opacity: 1;
+    }
+
+    100% {
+        scale: 0;
+        opacity: 0;
+    }
+}
+
+/* ✅ أنيميشن الخلفية */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

@@ -10,7 +10,7 @@ const Projects = () => {
     const [projectPreview, setProjectPreview] = useState(projectsList);
 
     return (
-        <main id='projects' className="lg:section flex flex-col lg:flex-row gap-2 lg:gap-6 py-16 items-center lg:items-start">
+        <main id='projects' className="lg:section flex flex-col lg:flex-row gap-2 lg:gap-6 py-14 items-center lg:items-start">
             {/* Filter Buttons */}
             <ProjectFilter
                 setProjectPreview={setProjectPreview}
@@ -18,7 +18,7 @@ const Projects = () => {
             />
 
             {/* Cards */}
-            <div className="px-4 md:px-5 lg:px-0 grow grid sm:grid-cols-2 xl:grid-cols-3 gap-5  ">
+            <div className="px-4 md:px-5 lg:px-0 grow grid sm:grid-cols-2 xl:grid-cols-3 gap-6  ">
                 <AnimatePresence mode="layout">
                     {projectPreview.map((project, i) => (
                         <ProjectCard key={i} project={project} />

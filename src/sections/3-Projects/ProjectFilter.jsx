@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const skills = ["All Project", "Next.js", "React.js", "Tailwind CSS", "Bootstrap", "JavaScript", "jQuery"];
+const categorys = ["All Project", "Next.js", "React.js", "Tailwind CSS", "Bootstrap", "JavaScript", "jQuery"];
 
 const ProjectFilter = ({ setProjectPreview, projectList }) => {
     const filterRef = useRef(null);
@@ -21,12 +21,12 @@ const ProjectFilter = ({ setProjectPreview, projectList }) => {
     }, []);
 
     const [currentActive, setCurrentActive] = useState("All Project");
-    const handelFilter = (skill) => {
-        if (skill === "All Project") {
+    const handelFilter = (category) => {
+        if (category === "All Project") {
             setProjectPreview(projectList); // رجّع الكل
         } else {
             const projectFiltered = projectList.filter((item) =>
-                item.category.includes(skill)
+                item.category.includes(category)
             );
             setProjectPreview(projectFiltered);
         }
@@ -34,16 +34,16 @@ const ProjectFilter = ({ setProjectPreview, projectList }) => {
 
     return (
         <div className="filter" ref={filterRef}>
-            {skills.map((skill, i) => (
+            {categorys.map((category, i) => (
                 <button
                     key={i}
                     onClick={() => {
-                        setCurrentActive(skill);
-                        handelFilter(skill);
+                        setCurrentActive(category);
+                        handelFilter(category);
                     }}
-                    className={currentActive == skill ? "active" : ""}
+                    className={currentActive == category ? "active" : ""}
                 >
-                    {skill}
+                    {category}
                 </button>
             ))
             }

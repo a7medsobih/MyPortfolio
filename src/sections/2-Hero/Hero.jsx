@@ -16,8 +16,8 @@ const Hero = () => {
         { link: "mailto:ahmedsobih7@gmail.com", icon: <SiGmail size={29} /> }
     ]
     return (
-        <section id='about' className="section ele-center flex-col md:flex-row justify-between pt-8 pb-10    ">
-            <div>
+        <section id='about' className="section ele-center flex-col md:flex-row justify-between pt-4 pb-10    ">
+            <div className='text-center md:text-left'>
                 <motion.div
                     className="relative inline-block cursor-pointer "
                     initial={{ opacity: 0, scale: 0 }}

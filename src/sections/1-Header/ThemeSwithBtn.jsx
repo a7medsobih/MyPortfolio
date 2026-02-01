@@ -20,7 +20,7 @@ const ThemeSwithBtn = () => {
     }, [theme]);
 
     return (
-        <button
+        <button disabled
             className='circle'
             onClick={() => {
                 setTheme(theme === "dark" ? "light" : "dark")

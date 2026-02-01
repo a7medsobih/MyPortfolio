@@ -80,7 +80,7 @@ html {
   }
 
   .btn-primary {
-    @apply bg-primary-darker hover:text-blue;
+    @apply bg-secondary hover:text-blue;
     flex: 1;
   }
 

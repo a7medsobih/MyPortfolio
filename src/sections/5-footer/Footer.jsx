@@ -10,7 +10,7 @@ const Footer = () => {
                         <li key={index}>
                             <a
                                 href={link.href}
-                                className="text-sm font-normal text-subtitle hover:text-accent smooth-transition"
+                                className="text-xs font-normal text-subtitle hover:text-accent smooth-transition"
                             >
                                 {link.text}
                             </a>
@@ -20,7 +20,7 @@ const Footer = () => {
 
                 {/* Copyright + Logo */}
                 <div className="flex items-center  gap-1">
-                    <p className="text-sm text-subtitle">&copy; {new Date().getFullYear()}  All rights reserved.</p>
+                    <p className="text-xs text-subtitle">&copy; {new Date().getFullYear()}  All rights reserved.</p>
                     <a href="https://github.com/a7medsobih" target="_blank" className="inline-flex items-center">
                         <img
                             src={myLogo}

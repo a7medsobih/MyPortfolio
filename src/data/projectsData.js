@@ -1,7 +1,5 @@
 // src/data/projects.js
 import img1 from "../images/salama.png";
-import img2 from "../images/02.png";
-import img3 from "../images/03.png";
 import next1 from "../images/next01.png";
 import next2 from "../images/02.png";
 import next3 from "../images/03.png";
@@ -21,6 +19,13 @@ import wr6 from "../images/wr6.png";
 import wr7 from "../images/wr7.png";
 import e from "../images/e.png";
 import sc from "../images/smartcity.png";
+import ha1 from "../images/ha1.png";
+import ha2 from "../images/ha2.png";
+import ha3 from "../images/ha3.png";
+import ha4 from "../images/ha4.png";
+import ha5 from "../images/ha5.png";
+import tl from "../images/tailwindland.png";
+import edu from "../images/edu.png";
 
 export const projectsList = [
     {
@@ -49,7 +54,7 @@ export const projectsList = [
         images: [next1, next2, next3, next4, next5],
         github: "https://github.com/a7medsobih/next-real-estate",
         live: "https://a7medsobih.github.io/next-real-estate",
-        category: ["Bootstrap", "jQuery", "HTML & CSS"],
+        category: ["Bootstrap", "jQuery", "JavaScript"],
         tags: ["featured"],
         skills: ["jQuery", "Bootstrap"]
     },
@@ -59,7 +64,8 @@ export const projectsList = [
         images: [al01, al02, al03, al04, al05],
         github: "https://github.com/a7medsobih/elalmanya-top-control",
         live: "https://elalmanya-top-control.vercel.app",
-        category: ["jQuery", "Bootstrap"],
+        category: ["jQuery", "Bootstrap", "JavaScript"],
+        tags: ["featured"],
         skills: ["jQuery", "Bootstrap"]
     },
     {
@@ -68,9 +74,20 @@ export const projectsList = [
         images: [wr1, wr2, wr3, wr4, wr5, wr6, wr7],
         github: "https://github.com/a7medsobih/wire-ropes",
         live: "https://a7medsobih.github.io/wire-ropes",
-        category: ["jQuery", "Bootstrap"],
+        category: ["jQuery", "Bootstrap", "JavaScript"],
         skills: ["jQuery", "Bootstrap"],
         tags: ["featured"]
+    },
+    {
+        title: "Tailwind-Land",
+        description:
+            `A modern, responsive landing page built with Tailwind CSS, showcasing the power of utility-first design. Features clean design, optimized performance, and reusable React components .`,
+        images: [tl],
+        live: "https://tailwind-land-theta.vercel.app",
+        github: "https://github.com/a7medsobih/tailwind-land",
+        category: ["React.js", "Tailwind CSS"],
+        tags: [],
+        skills: ["React.js", "Tailwind CSS"]
     },
     {
         title: "Engineering Services Landing Page",
@@ -79,9 +96,31 @@ export const projectsList = [
         images: [img1],
         live: "https://a7medsobih.github.io/salama-engineering-services",
         github: "https://github.com/a7medsobih/salama-engineering-services",
-        category: ["HTML & CSS", "JavaScript", "Bootstrap"],
+        category: ["JavaScript", "Bootstrap"],
         tags: [],
-        skills: ["Bootstrap", "JavaScript"]
+        skills: ["Bootstrap", "jQuery"]
+    },
+    {
+        title: "Abualhamed Shipping Website",
+        description:
+            `A website for a shipping company, designed to showcase logistics services, company information, and contact details. Built with a clean, structured layout tailored for the transport and shipping sector.`,
+        images: [ha1, ha2, ha3, ha4, ha5],
+        live: "https://a7medsobih.github.io/abualhamed-shipping",
+        github: "https://github.com/a7medsobih/abualhamed-shipping",
+        category: ["Bootstrap"],
+        tags: [],
+        skills: ["HTML & CSS", "Bootstrap"]
+    },
+    {
+        title: "🎓 EduBridge",
+        description:
+            `An interactive educational website designed to deliver an engaging and user-friendly learning experience`,
+        images: [edu],
+        live: "https://edubridge-red.vercel.app",
+        github: "https://github.com/a7medsobih/edubridge",
+        category: ["React.js"],
+        tags: [],
+        skills: ["React.js", "AOS"]
     },
 
 ];

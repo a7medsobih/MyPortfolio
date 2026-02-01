@@ -5,13 +5,15 @@ import Lottie from "lottie-react";
 import computer from "../../gif/Programming Computer.json";
 import * as motion from "motion/react-client"
 import ScrollAnimation from '../../components/ScrollAnimation';
+import { SiGmail } from 'react-icons/si';
 
 const Hero = () => {
     const icons = [
-        { link: "https://www.linkedin.com/in/ahmedsobih", icon: <FaLinkedin size={28} /> },
-        { link: "https://github.com/a7medsobih", icon: <FaGithub size={28} /> },
-        { link: "https://wa.me/201017320732", icon: <FaWhatsapp size={28} /> },
-        { link: "", icon: <FaFacebook size={28} /> },
+        { link: "https://www.linkedin.com/in/ahmedsobih", icon: <FaLinkedin size={29} /> },
+        { link: "https://github.com/a7medsobih", icon: <FaGithub size={29} /> },
+        { link: "https://wa.me/201017320732", icon: <FaWhatsapp size={29} /> },
+        { link: "https://www.facebook.com/ahmed.sobih.39", icon: <FaFacebook size={29} /> },
+        { link: "mailto:ahmedsobih7@gmail.com", icon: <SiGmail size={29} /> }
     ]
     return (
         <section id='about' className="section ele-center flex-col md:flex-row justify-between pt-8 pb-10    ">

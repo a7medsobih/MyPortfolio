@@ -1,14 +1,14 @@
 /* Projects.css */
 .filter {
-    @apply flex lg:flex-col flex-wrap justify-center gap-3 lg:gap-2 w-full lg:max-w-[200px] sticky top-0 lg:top-4 z-10 bg-primary p-4 lg:p-0 rounded-b-md
+    @apply flex lg:flex-col flex-wrap justify-center gap-2 lg:gap-2 w-full lg:max-w-[160px] sticky top-0 lg:top-4 z-50 bg-primary p-2 lg:p-0 rounded-b-md
 }
 
 .filter.stuck {
-    @apply shadow-md shadow-black/30 smooth-transition lg:shadow-none;
+    @apply shadow-md shadow-black/80 smooth-transition lg:shadow-none;
 }
 
 .filter button {
-    @apply py-2 px-4 rounded-sm border border-borderColor text-xs md:text-base smooth-transition;
+    @apply py-2 px-4 rounded-sm border border-borderColor text-xs md:text-sm smooth-transition;
     background-color: rgba(36, 37, 46, 1);
     opacity: 0.6;
 }
@@ -29,20 +29,18 @@
     @apply flex flex-col h-full rounded-md shadow-md shadow-black/70 hover:shadow-black/80;
     border-width: 0.5px;
     border-color: rgba(93, 188, 252, 0.2);
-    background-color: var(--color-primary-dark);
-    /* background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%); */
+    position: relative;
+    background-color: #141414b3
+        /* background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%); */
 }
 
-/* .card:hover {
-    transform: scale(1.01);
-} */
 
 .icon-tooltip {
-    @apply relative inline-block cursor-pointer smooth-transition hover:text-light;
+    /* @apply relative inline-block smooth-transition; */
 }
 
 .icon-tooltip:hover {
-    scale: 1.2
+    scale: 1.1;
 }
 
 .icon-tooltip::after {
@@ -52,9 +50,8 @@
     bottom: 120%;
     /* فوق الأيقونة */
     left: 50%;
-    transform: translateX(-50%) scale(0);
     transform-origin: bottom center;
-    background: rgba(20, 20, 25, 0.95);
+    background: rgba(20, 20, 25, 0.9);
     color: white;
     font-size: 11px;
     padding: 4px 8px;
@@ -62,9 +59,33 @@
     white-space: nowrap;
     opacity: 0;
     z-index: 50;
+    transform: translateX(-50%);
 }
 
 .icon-tooltip:hover::after {
     opacity: 1;
-    transform: translateX(-50%) scale(1);
+}
+
+.project-tag {
+    @apply rounded-full shadow-md shadow-black/20;
+    padding: 0.15rem 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    z-index: 10;
+    background-color: var(--color-accent);
+    color: var(--color-light);
+}
+
+
+.project-tag.featured {
+    background-color: var(--color-blue);
+    color: var(--color-light);
+}
+
+.skill-tag {
+    @apply inline-block px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-300 border border-cyan-400/20 rounded-full;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.65rem;
+
+    /* text-transform: uppercase; */
 }

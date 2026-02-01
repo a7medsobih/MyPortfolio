@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const skills = ["All Project", "React", "Tailwind CSS", "Bootstrap", "HTML & CSS", "JS Projects"];
+const skills = ["All Project", "Next.js", "React.js", "Tailwind CSS", "Bootstrap", "JavaScript", "jQuery"];
 
 const ProjectFilter = ({ setProjectPreview, projectList }) => {
     const filterRef = useRef(null);

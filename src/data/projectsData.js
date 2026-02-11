@@ -26,9 +26,11 @@ import ha4 from "../images/ha4.png";
 import ha5 from "../images/ha5.png";
 import tl from "../images/tailwindland.png";
 import edu from "../images/edu.png";
+import myp from "../images/myPortfolio.png";
 
 export const projectsList = [
     {
+        id: 1,
         title: "E-Commerce Product Page – Next.js",
         description: `A modern product page built with Next.js, featuring API data integration, smooth user interactions, and a pixel-perfect UI based on a Figma design.`,
         images: [e],
@@ -39,6 +41,7 @@ export const projectsList = [
         tags: ["new"]
     },
     {
+        id: 2,
         title: "Smart City System – Graduation Project (Digital Egypt Pioneers)",
         description: `A web platform linking citizens to city management with a Citizen Portal for requests and an Admin Dashboard for organized complaint tracking.`,
         images: [sc],
@@ -49,6 +52,7 @@ export const projectsList = [
         tags: ["new", "featured"]
     },
     {
+        id: 3,
         title: "Real Estate Website – Next",
         description: "A modern real estate platform designed and developed from scratch, presenting property projects and residential units through a strong, engaging, and fully responsive user experience.",
         images: [next1, next2, next3, next4, next5],
@@ -59,6 +63,7 @@ export const projectsList = [
         skills: ["jQuery", "Bootstrap"]
     },
     {
+        id: 4,
         title: "Pest Control Company Website",
         description: `A corporate pest control website designed and developed from scratch, focused on clear service presentation, easy customer communication, and a fully responsive user experience.`,
         images: [al01, al02, al03, al04, al05],
@@ -69,6 +74,7 @@ export const projectsList = [
         skills: ["jQuery", "Bootstrap"]
     },
     {
+        id: 5,
         title: "Industrial Company Website – Steel Wire Ropes",
         description: `A modern and professional industrial website showcasing the products of a company specialized in steel wire ropes, with a strong focus on highlighting products and their technical specifications.`,
         images: [wr1, wr2, wr3, wr4, wr5, wr6, wr7],
@@ -79,6 +85,19 @@ export const projectsList = [
         tags: ["featured"]
     },
     {
+        id: 6,
+        title: "myPortfolio",
+        description:
+            `A modern, responsive portfolio website built to showcase my projects, skills, and experience through a clean design, smooth animations, and an engaging user experience.`,
+        images: [myp],
+        live: "https://ahmedsobih-portfolio.vercel.app",
+        github: "https://github.com/a7medsobih/MyPortfolio",
+        category: ["React.js", "Tailwind CSS"],
+        tags: ["New"],
+        skills: ["React.js", "Tailwind CSS", "Framer Motion", "Fancybox"]
+    },
+    {
+        id: 7,
         title: "Tailwind-Land",
         description:
             `A modern, responsive landing page built with Tailwind CSS, showcasing the power of utility-first design. Features clean design, optimized performance, and reusable React components .`,
@@ -90,6 +109,7 @@ export const projectsList = [
         skills: ["React.js", "Tailwind CSS"]
     },
     {
+        id: 8,
         title: "Engineering Services Landing Page",
         description:
             `A bilingual marketing landing page for a heavy equipment engineering company, presenting services and past projects in a modern, professional layout.`,
@@ -101,6 +121,7 @@ export const projectsList = [
         skills: ["Bootstrap", "jQuery"]
     },
     {
+        id: 9,
         title: "Abualhamed Shipping Website",
         description:
             `A website for a shipping company, designed to showcase logistics services, company information, and contact details. Built with a clean, structured layout tailored for the transport and shipping sector.`,
@@ -112,6 +133,7 @@ export const projectsList = [
         skills: ["HTML & CSS", "Bootstrap"]
     },
     {
+        id: 10,
         title: "🎓 EduBridge",
         description:
             `An interactive educational website designed to deliver an engaging and user-friendly learning experience`,
@@ -122,5 +144,4 @@ export const projectsList = [
         tags: [],
         skills: ["React.js", "AOS"]
     },
-
 ];

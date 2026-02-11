@@ -5,7 +5,7 @@ import { useRef, useEffect } from "react";
 const ScrollAnimation = ({ children, direction = "up", duration = 0.5, delay = 0 }) => {
     const ref = useRef(null);
     const controls = useAnimation();
-    const isInView = useInView(ref, { once: false }); // يظهر مرة واحدة
+    const isInView = useInView(ref, { once: true }); // يظهر مرة واحدة
 
     const variants = {
         hidden: {

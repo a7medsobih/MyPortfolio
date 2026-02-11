@@ -37,7 +37,7 @@ const ProjectImage = ({ images, altText }) => {
     return (
         <>
             <div
-                className="relative w-full h-72 image-wrapper overflow-hidden cursor-pointer rounded-t-md"
+                className="relative w-full h-48 image-wrapper overflow-hidden cursor-pointer rounded-t-2xl "
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={openGallery}

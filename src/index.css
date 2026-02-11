@@ -8,20 +8,24 @@
   --color-light: #000;
   --color-blue: rgb(93, 188, 252);
 
-  --color-primary: #f9f9f9;
-  --color-primary-light: #e4e4e4;
+  --color-primary: rgb(247 249 248);
+  --color-primary-light: #fefefe;
+  --color-primary-lighter: rgb(16 183 127 / 10%);
 
   --color-secondary: #48485e;
-  --color-primary-dark: #eeeeee;
+  --color-primary-dark: rgb(237 240 243);
   --color-primary-darker: #a1a1aa;
 
-  --color-accent: rgb(224, 165, 96);
-  --color-highlight: #facc15;
+  --color-accent: #10b77f;
+  --color-highlight: #10b77f;
 
   --color-header: rgb(39, 39, 42);
-  --color-subtitle: rgb(82, 82, 91);
+  --color-subtitle: rgb(91 99 111);
 
-  --color-border: rgba(63, 63, 70, 0.12);
+  /* --color-border: rgba(63, 63, 70, 0.12); */
+
+  --color-borderC: #bddbd1;
+  --color-border-highlight: rgb(16 183 127 / 20%);
 }
 
 .dark {
@@ -29,20 +33,23 @@
   --color-light: #fff;
   --color-blue: rgb(93, 188, 252);
 
-  --color-primary: rgba(24, 24, 27);
-  --color-primary-light: #27272a;
+  --color-primary: rgb(11, 11, 15);
+  --color-primary-light: rgb(17 17 23 / 80%);
+  --color-primary-lighter: rgb(0 212 255 / 10%);
 
   --color-secondary: #3f3f46;
-  --color-primary-dark: #222225;
+  --color-primary-dark: rgb(7 7 9);
   --color-primary-darker: #18181b;
 
   --color-accent: rgb(224, 165, 96);
-  --color-highlight: #facc15;
+  --color-highlight: rgb(0 249 238);
 
-  --color-header: rgb(39, 39, 42);
-  --color-subtitle: rgb(161, 161, 170);
+  --color-header: #101015;
+  --color-subtitle: #8f99a3;
 
-  --color-border: rgba(63, 63, 70, 0.4);
+  --color-borderC: rgb(39 39 53 / 50%);
+  --color-border-highlight: rgb(0 212 255 / 20%);
+
 
 }
 
@@ -53,7 +60,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-dark text-light;
+    @apply bg-primary text-light;
     font-family: "Exo 2", sans-serif;
     letter-spacing: 0.9px;
   }
@@ -61,31 +68,40 @@ html {
 
 @layer components {
   .container {
-    @apply mx-auto border border-borderColor bg-primary;
+    @apply mx-auto px-3 md:px-2;
   }
 
   .section {
-    @apply px-4 md:px-5;
+    @apply py-20;
   }
 
   .btn {
-    @apply hover:bg-light shadow-md shadow-black/20 smooth-transition active:scale-90;
+    @apply w-full smooth-transition shadow-md;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.4rem 0.75rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
     font-size: 0.9rem;
-    border: 0.5px solid var(--color-border);
+    ;
+    /* border: 0.5px solid var(--color-border); */
   }
+
+  .btn-light {
+    @apply bg-primary-lighter border border-border-highlight hover:border-highlight text-highlight;
+  }
+
 
   .btn-primary {
-    @apply bg-secondary hover:text-blue;
-    flex: 1;
+    @apply bg-highlight text-dark;
   }
 
-  .btn-scondery {
-    @apply bg-secondary hover:text-dark;
+  .btn-secondary {
+    @apply bg-primary-light text-light backdrop-blur-xl border border-borderC hover:border-highlight hover:text-highlight;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4;
   }
 }
 
@@ -97,6 +113,13 @@ html {
 
 .ele-center {
   @apply flex items-center;
+}
+
+.glass-card {
+  @apply bg-primary-light backdrop-blur-xl border border-borderC;
+  /* border-width: 1px; */
+  /* border-color: rgb(39 39 53 / 50%); */
+  /* background-color: rgb(17 17 23 / 80%); */
 }
 
 /* Scrollbar Styling */
@@ -113,7 +136,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: theme('colors.blue');
+  background-color: theme('colors.accent');
   /* لون المؤشر */
   border-radius: 6px;
   border: 2px solid theme('colors.primary');

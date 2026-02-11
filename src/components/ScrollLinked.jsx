@@ -24,7 +24,8 @@ const ScrollLinked = ({ children }) => {
                     height: 4,
                     transformOrigin: "0%",
                     // backgroundColor: "#ff0088",
-                    backgroundColor: "#d4a54e",
+                    backgroundColor: "var(--color-accent)",
+                    borderRadius: 20,
                     zIndex: 9999,
                 }}
             />

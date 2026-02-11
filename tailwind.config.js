@@ -13,6 +13,7 @@ export default {
 
         primary: "var(--color-primary)",
         "primary-light": "var(--color-primary-light)",
+        "primary-lighter": "var(--color-primary-lighter)",
 
         secondary: "var(--color-secondary)",
         "primary-dark": "var(--color-primary-dark)",
@@ -23,14 +24,16 @@ export default {
 
         header: "var(--color-header)",
         subtitle: "var(--color-subtitle)",
-        borderColor: "var(--color-border)"
+        borderC: "var(--color-borderC)",
+        "border-highlight": "var(--color-border-highlight)"
+
       },
       screens: {
-        sm: "576px",
+        // sm: "576px",
         md: "768px",
-        lg: "992px",
-        xl: "1100px",
-        "2xl": "1200px"
+        // lg: "10",
+        xl: "1280px",
+        "2xl": "1536px"
       }
     },
   },

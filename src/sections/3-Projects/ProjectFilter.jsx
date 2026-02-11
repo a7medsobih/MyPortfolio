@@ -1,24 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+// Project Fillter
+import { useRef, useState } from "react";
 
 const categorys = ["All Project", "Next.js", "React.js", "Tailwind CSS", "Bootstrap", "JavaScript", "jQuery"];
 
-const ProjectFilter = ({ setProjectPreview, projectList }) => {
+const ProjectFilter = ({ setProjectPreview, projectList, className }) => {
     const filterRef = useRef(null);
-    useEffect(() => {
-        const handelScroll = () => {
-            const el = filterRef.current;
-            if (!el) return;
-
-            if (el.getBoundingClientRect().top <= 0) {
-                el.classList.add("stuck");
-            } else {
-                el.classList.remove("stuck");
-            }
-        }
-
-        window.addEventListener("scroll", handelScroll);
-        return () => window.removeEventListener("scroll", handelScroll);
-    }, []);
 
     const [currentActive, setCurrentActive] = useState("All Project");
     const handelFilter = (category) => {
@@ -33,7 +19,7 @@ const ProjectFilter = ({ setProjectPreview, projectList }) => {
     }
 
     return (
-        <div className="filter" ref={filterRef}>
+        <div className={`filter ${className || ""}`} ref={filterRef}>
             {categorys.map((category, i) => (
                 <button
                     key={i}
@@ -41,7 +27,7 @@ const ProjectFilter = ({ setProjectPreview, projectList }) => {
                         setCurrentActive(category);
                         handelFilter(category);
                     }}
-                    className={currentActive == category ? "active" : ""}
+                    className={`glass-card ${currentActive == category ? "active" : ""}`}
                 >
                     {category}
                 </button>

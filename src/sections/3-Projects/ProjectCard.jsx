@@ -47,17 +47,25 @@ const ProjectCard = ({ project }) => {
                         View
                     </a>
 
-                    <a
-                        href={project.github}
-                        title="GitHub Repo"
-                        data-tooltip="GitHub Repo"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="btn btn-secondary gap-3 "
-                    >
-                        <FaGithub size={24} />
-                        GitHub
-                    </a>
+                    {project.github ? (
+                        <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="btn btn-secondary gap-3"
+                        >
+                            <FaGithub size={24} />
+                            GitHub
+                        </a>
+                    ) : (
+                        <button
+                            disabled
+                            className="btn btn-secondary hover:text-light hover:border-borderC  gap-3 opacity-50 cursor-not-allowed"
+                        >
+                            <FaGithub size={24} />
+                            GitHub
+                        </button>
+                    )}
                 </div>
 
             </div>

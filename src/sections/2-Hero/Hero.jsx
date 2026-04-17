@@ -41,17 +41,18 @@ const Hero = () => {
                         />
                     </motion.div>
                     <ScrollAnimation direction="right" duration={0.4} delay={0.1}>
-                        <h1 className="text-3xl md:text-4xl font-bold text-light leading-tight mt-4">
+                        <h1 className="text-2xl md:text-3xl font-bold text-light leading-tight mt-4">
                             Ahmed Sobih
                         </h1>
-                        <h2 className="text-2xl md:text-3xl mt-3 mb-6 font-semibold text-light">
-                            Front-End Developer <span className='italic'>(React.js)</span> && Web Designer
+                        <h2 className="text-xl md:text-2xl mt-3 mb-6 font-semibold text-light">
+                            {/* Front-End Developer <span className='italic'>(React.js)</span> && Web Designer */}
+                            Full-Stack Developer <span className='italic'>(MERN & MEAN)</span> | UI/UX Designer
                         </h2>
                     </ScrollAnimation>
 
                     <ScrollAnimation direction="right" duration={0.4} delay={0.1}>
                         <p className="text-subtitle leading-relaxed max-w-7xl">
-                            Skilled in React.js, HTML, CSS, JavaScript, UI/UX, and performance optimization. I create beautiful, responsive, and user-friendly web applications.
+                            Full-Stack Web Developer with experience in building scalable web applications using MERN and MEAN stacks. Skilled in React.js, Next.js, Angular, Node.js, Express, and MongoDB, with a strong focus on UI/UX design and performance.
                         </p>
                     </ScrollAnimation>
 

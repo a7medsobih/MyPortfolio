@@ -1,7 +1,7 @@
 // Project Fillter
 import { useRef, useState } from "react";
 
-const categorys = ["All Project", "Next.js", "React.js", "Tailwind CSS", "Bootstrap", "JavaScript", "jQuery"];
+const categorys = ["All Project", "Full Stack", "Next.js", "React.js", "Tailwind CSS", "Bootstrap", "JavaScript", "jQuery"];
 
 const ProjectFilter = ({ setProjectPreview, projectList, className }) => {
     const filterRef = useRef(null);
